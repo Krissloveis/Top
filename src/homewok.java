@@ -1,3 +1,6 @@
+import java.util.Random;
+import java.util.Scanner;
+
 public class homewok {
     public static void main(String[] args) {
 
@@ -15,10 +18,27 @@ public class homewok {
 
     boolean muBoolean = false;*/
 
+
+        // Переполнение
+
+long myLong = 2147483648L;
+        System.out.println("Значение long: " + myLong);
+
+int myInt = (int) myLong;
+        System.out.println("Переполненное значение int: " + myInt);
+
+
 //     Арифметические операции с целыми числами
 
-        int a = 16;
-        int b = 5;
+        // Сканнер
+
+        /*Scanner sc = new Scanner(System.in);
+
+        System.out.print("Введите число а: ");
+        int a = sc.nextInt();
+
+        System.out.print("Введите число b: ");
+        int b = sc.nextInt();
 
         int sum = a + b;
         int difference = a - b;
@@ -30,7 +50,7 @@ public class homewok {
         System.out.println("Вычитание: " + difference);
         System.out.println("Умножение: " + product);
         System.out.println("Деление: " + quotient);
-        System.out.println("Остаток от деления: " + remainder);
+        System.out.println("Остаток от деления: " + remainder);*/
 
     }
 }
