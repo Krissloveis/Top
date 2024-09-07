@@ -1,56 +1,50 @@
-import java.util.Random;
-import java.util.Scanner;
-
 public class homewok {
     public static void main(String[] args) {
+        int paperReserve = 600000;
+        int inkReserve = 600000;
+        int coverReserve = 2000;
+        double printRollerMinTemp = 80.5;
+        double printRollerMaxTemp = 120.75;
 
-    /*byte countRunCycleForField;
-    countRunCycleForField = 0;
-    byte countRunCycleForField2 = 123;
-    short myShort = 127;
-    int myInt = 127;
-    long myLong = 12000000007L;
+        int pagesInBook = 530;
+        int booksCount = 2000;
+        boolean coldPrintingMode = true;
+        double printRollerTemp = 200;
 
-    float myFloat = 3.0f;
-    double myDouble = 3.0;
+        int papersCount  = booksCount * pagesInBook / 2;
+        int inkedPapersCount = papersCount + booksCount;
 
-    char myChar = 'a';
+        boolean paperlsEnough = papersCount <= paperReserve;
+        boolean inkIsEnought = inkedPapersCount <= inkReserve;
+        boolean coversAreEnought = booksCount <= coverReserve;
+        boolean rollerTemplsNormal =
+                printRollerTemp >= printRollerMinTemp &&
+                        printRollerTemp <= printRollerMaxTemp;
 
-    boolean muBoolean = false;*/
+        boolean errors = false;
 
+        if (!paperlsEnough) {
+            errors = true;
+            System.out.println("Бумаги недостаточно");
+        }
+        if (!inkIsEnought) {
+            errors = true;
+            System.out.println("Чернил недостаточно");
+        }
+        if (!coversAreEnought) {
+            errors = true;
+            System.out.println("Обложек не досточно");
+        }
+        if (!rollerTemplsNormal && !coldPrintingMode) {
+            errors = true;
+            System.out.println("Неверный режим печати или температура печатающего ролла недопустимая");
+        }
+        if (errors) {
+            System.out.println("Печать запрещена");
+        } else {
+            System.out.println("Печать разрешена");
+        }
 
-        // Переполнение
-
-long myLong = 2147483648L;
-        System.out.println("Значение long: " + myLong);
-
-int myInt = (int) myLong;
-        System.out.println("Переполненное значение int: " + myInt);
-
-
-//     Арифметические операции с целыми числами
-
-        // Сканнер
-
-        /*Scanner sc = new Scanner(System.in);
-
-        System.out.print("Введите число а: ");
-        int a = sc.nextInt();
-
-        System.out.print("Введите число b: ");
-        int b = sc.nextInt();
-
-        int sum = a + b;
-        int difference = a - b;
-        int product = a * b;
-        double quotient = (double) a / b;
-        int remainder = a % b;
-
-        System.out.println("Сложение: " + sum);
-        System.out.println("Вычитание: " + difference);
-        System.out.println("Умножение: " + product);
-        System.out.println("Деление: " + quotient);
-        System.out.println("Остаток от деления: " + remainder);*/
 
     }
 }
