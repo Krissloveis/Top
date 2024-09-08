@@ -1,51 +1,19 @@
+import java.util.Scanner;
+
 public class homewok {
     public static void main(String[] args) {
-        int paperReserve = 600000;
-        int inkReserve = 600000;
-        int coverReserve = 2000;
-        double printRollerMinTemp = 80.5;
-        double printRollerMaxTemp = 120.75;
+                Scanner scanner = new Scanner(System.in);
+                System.out.print("Введите возраст человека: ");
+                int age = scanner.nextInt();
 
-        int pagesInBook = 530;
-        int booksCount = 2000;
-        boolean coldPrintingMode = true;
-        double printRollerTemp = 200;
-
-        int papersCount  = booksCount * pagesInBook / 2;
-        int inkedPapersCount = papersCount + booksCount;
-
-        boolean paperlsEnough = papersCount <= paperReserve;
-        boolean inkIsEnought = inkedPapersCount <= inkReserve;
-        boolean coversAreEnought = booksCount <= coverReserve;
-        boolean rollerTemplsNormal =
-                printRollerTemp >= printRollerMinTemp &&
-                        printRollerTemp <= printRollerMaxTemp;
-
-        boolean errors = false;
-
-        if (!paperlsEnough) {
-            errors = true;
-            System.out.println("Бумаги недостаточно");
+                if (age >= 2 && age <= 6) {
+                    System.out.println("Если возраст человека равен " + age + ", то ему следует ходить в детский сад.");
+                } else if (age >= 7 && age <= 18) {
+                    System.out.println("Если возраст человека равен " + age + ", то ему следует посещать школу.");
+                } else if (age > 18 && age < 24) {
+                    System.out.println("Если возраст человека равен " + age + ", то ему следует учиться в университете.");
+                } else {
+                    System.out.println("Если возраст человека равен " + age + ", то ему пора идти на работу.");
+                }
+            }
         }
-        if (!inkIsEnought) {
-            errors = true;
-            System.out.println("Чернил недостаточно");
-        }
-        if (!coversAreEnought) {
-            errors = true;
-            System.out.println("Обложек не досточно");
-        }
-        if (!rollerTemplsNormal && !coldPrintingMode) {
-            errors = true;
-            System.out.println("Неверный режим печати или температура печатающего ролла недопустимая");
-        }
-        if (errors) {
-            System.out.println("Печать запрещена");
-        } else {
-            System.out.println("Печать разрешена");
-        }
-
-
-    }
-}
-
