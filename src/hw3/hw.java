@@ -3,7 +3,7 @@ package hw3;
 public class hw {
     public static void main(String[] args) {
 
-        String input = "Hello World 12345!";
+        String input = "Hello Kris Kiss 07081995!";
         int lowerCaseCount = 0, upperCaseCount = 0;
         int digits0To4 = 0, digits5To9 = 0;
 
@@ -17,7 +17,7 @@ public class hw {
                 else digits5To9++;
             }
         }
-        System.out.println("Lowercase: " + lowerCaseCount + ", Uppercase: " + upperCaseCount);
-        System.out.println("Digits 0-4: " + digits0To4 + ", Digits 5-9: " + digits5To9);
+        System.out.println("Строчные буквы: " + lowerCaseCount + ", Прописные буквы: " + upperCaseCount);
+        System.out.println("Цифры 0-4: " + digits0To4 + ", Цифры 5-9: " + digits5To9);
     }
 }
