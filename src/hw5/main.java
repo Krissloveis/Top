@@ -42,8 +42,8 @@ public class main {
     }
 
     static void task3() {
-        char[] symbols = new char[]{'f', 'q', 'o', 'y'};
-        char[] vowels = new char[]{'y', 'u', 'a', 'e', 'i', 'o'};
+        char[] symbols = new char[]{'f', 'q', 'O', 'y'};
+        char[] vowels = new char[]{'y', 'u', 'a', 'e', 'i', 'o', 'E', 'Y', 'U', 'I','O','A'};
         for (int i = 0; i < symbols.length; i++) {
             for (int j = 0; j < vowels.length; j++) {
                 if (symbols[i] == vowels[j]) {
